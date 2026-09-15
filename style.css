@@ -1,0 +1,860 @@
+/* ========================================
+   GENERAL SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f7f4;
+    color: #333;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+======================================== */
+
+nav {
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c8e6c9;
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+section h2 {
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   HOME / HERO SECTION
+======================================== */
+
+.hero {
+    background-image: url("images/village.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 60px 20px;
+    position: relative;
+}
+
+/* Dark overlay over village image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Keep text and button above overlay */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+
+    padding: 12px 20px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    margin-top: 15px;
+
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* ========================================
+   WELCOME MESSAGE
+======================================== */
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* ========================================
+   VILLAGE CARDS
+======================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #388e3c;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   VILLAGE PHOTOS
+   IMPORTANT FIX FOR LARGE IMAGES
+======================================== */
+
+.card-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.card-images img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.card-images img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+/* ========================================
+   LISTS
+======================================== */
+
+ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   TEACHER SECTION
+======================================== */
+
+.teacher-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.teacher-card {
+    background-color: white;
+
+    width: 220px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Teacher photos */
+.teacher-card img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+.teacher-card h3 {
+    color: #2e7d32;
+    margin: 5px 0;
+}
+
+.teacher-card p {
+    color: #666;
+}
+
+
+/* ========================================
+   SCHOOL INTRODUCTION
+======================================== */
+
+.school-intro {
+    text-align: center;
+
+    background-color: #dcedc8;
+
+    max-width: 100%;
+
+    padding: 50px 20px;
+}
+
+.school-intro h2 {
+    color: #2e7d32;
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   SCHOOL FACILITIES
+======================================== */
+
+#facilities {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+#facilities > h2 {
+    text-align: center;
+
+    color: #2e7d32;
+
+    margin-bottom: 30px;
+}
+
+
+/* Facility grid */
+.facility-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Facility card */
+.facility-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Facility photos */
+.facility-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Facility information */
+.facility-info {
+    padding: 20px;
+}
+
+.facility-info h3 {
+    color: #2e7d32;
+
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   LEARN MORE LINK
+======================================== */
+
+.learn-more {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+#contact {
+    background-color: white;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: #2e7d32;
+}
+
+#contact p {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #1b5e20;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   TABLET / SMALL SCREEN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card img {
+        width: 30%;
+        height: 100px;
+    }
+
+    .facility-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   MOBILE SCREEN
+======================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+
+    /* Navigation */
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+
+        margin: 5px 8px;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* Hero */
+    .hero {
+        min-height: 400px;
+
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+
+    /* Village cards */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+
+    /* Village images */
+    .card img {
+        width: 30%;
+        height: 90px;
+
+        margin: 3px;
+    }
+
+
+    /* Teacher cards */
+    .teacher-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* Teacher images */
+    .teacher-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    /* Facility images */
+    .facility-card img {
+        height: 200px;
+    }
+
+
+    /* Sections */
+    section {
+        padding: 35px 15px;
+    }
+}
+/* ========================================
+   IMAGE POPUP
+======================================== */
+
+.image-popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.image-popup img {
+    max-width: 90%;
+    max-height: 85%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* CLOSE BUTTON */
+
+.close-popup {
+    position: absolute;
+
+    top: 15px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 1001;
+}
+
+
+.close-popup:hover {
+    color: #c8e6c9;
+}
+
+
+/* CLICKABLE IMAGE */
+
+.card-images img {
+    cursor: pointer;
+}
+
+
+.card-images img:hover {
+    transform: scale(1.05);
+
+    transition: 0.3s;
+}
+/* ========================================
+   LIBRARY PAGE
+======================================== */
+
+#library-gallery {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+#library-gallery h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 30px;
+}
+
+
+/* Library image gallery */
+
+.library-images {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Library photos */
+
+.library-images img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s;
+}
+
+
+/* Image hover */
+
+.library-images img:hover {
+    transform: scale(1.04);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .library-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .library-images img {
+        height: 180px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .library-images {
+        grid-template-columns: 1fr;
+    }
+
+    .library-images img {
+        height: 230px;
+    }
+
+}
+/* ========================================
+   OUR VILLAGE - PAST AND PRESENT
+======================================== */
+
+#village-past,
+#village-present {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+#village-past {
+    background-color: #fff8e1;
+}
+
+#village-present {
+    background-color: #e8f5e9;
+}
+
+#village-past h2,
+#village-present h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#village-past p,
+#village-present p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* PHOTO GRID */
+
+.village-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.village-photo-gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s;
+}
+
+
+.village-photo-gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .village-photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .village-photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .village-photo-gallery img {
+        height: 230px;
+    }
+
+}
+/* ========================================
+   OUR ACHIEVEMENTS
+======================================== */
+
+.achievement-section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 45px 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-section h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.achievement-section > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* ACHIEVEMENT PHOTO GRID */
+
+.achievement-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.achievement-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.achievement-gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .achievement-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .achievement-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-gallery img {
+        height: 230px;
+    }
+
+}
